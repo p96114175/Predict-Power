@@ -86,9 +86,9 @@ def predict_power():
 
     # 載入測試資料集
     df = pd.read_csv('test.csv')
-    test_x = pd.DataFrame(df[['rate', 'people_use', 'ele_pro', 'sun']][:15])
-    print("target_names: " + str(df[['rate', 'people_use', 'ele_pro', 'sun']][:15]))
-    test_y = pd.DataFrame(df['operating reserve'][:15], columns=['operating reserve'])
+    test_x = pd.DataFrame(df[['rate', 'people_use', 'ele_pro', 'sun']][-15:])
+    print("target_names: " + str(df[['rate', 'people_use', 'ele_pro', 'sun']][-15:]))
+    test_y = pd.DataFrame(df['operating reserve'][-15:], columns=['operating reserve'])
     # print(test_x)
     # print(test_y)
 
